@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yuqi-pay-service:war">
+    <output-path>$PROJECT_DIR$/yuqi-pay-service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>yuqi-pay-service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="yuqi-pay-service-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="yuqi-pay-service:war exploded" />
+    </root>
+  </artifact>
+</component>

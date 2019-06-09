@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yuqi-sellergoods-interface:war">
+    <output-path>$PROJECT_DIR$/yuqi-sellergoods-interface/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>yuqi-sellergoods-interface</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="yuqi-sellergoods-interface.war">
+      <element id="artifact" artifact-name="yuqi-sellergoods-interface:war exploded" />
+    </root>
+  </artifact>
+</component>

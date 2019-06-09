@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="pinyougou-order-service" />
+        <module name="yuqi-common" />
+        <module name="yuqi-dao" />
+        <module name="yuqi-manager-web" />
+        <module name="yuqi-pojo" />
+        <module name="yuqi-portal-web" />
+        <module name="yuqi-recommend-interface" />
+        <module name="yuqi-recommend-service" />
+        <module name="yuqi-search-interface" />
+        <module name="yuqi-search-service" />
+        <module name="yuqi-search-web" />
+        <module name="yuqi-sellergoods-interface" />
+        <module name="yuqi-sellergoods-service" />
+        <module name="yuqi-shop-web" />
+        <module name="yuqi-solr-util" />
+        <module name="yuqi-user-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pinyougou-order-service" target="1.7" />
+      <module name="yiqi-mahout-service" target="1.7" />
+      <module name="yuqi-cart-interface" target="1.7" />
+      <module name="yuqi-cart-service" target="1.7" />
+      <module name="yuqi-cart-web" target="1.7" />
+      <module name="yuqi-common" target="1.7" />
+      <module name="yuqi-content-interface" target="1.7" />
+      <module name="yuqi-content-service" target="1.7" />
+      <module name="yuqi-dao" target="1.7" />
+      <module name="yuqi-mahout-service" target="1.7" />
+      <module name="yuqi-manager-web" target="1.7" />
+      <module name="yuqi-order-interface" target="1.7" />
+      <module name="yuqi-order-service" target="1.7" />
+      <module name="yuqi-page-interface" target="1.7" />
+      <module name="yuqi-page-service" target="1.7" />
+      <module name="yuqi-page-web" target="1.7" />
+      <module name="yuqi-parent" target="1.7" />
+      <module name="yuqi-pay-interface" target="1.7" />
+      <module name="yuqi-pay-service" target="1.7" />
+      <module name="yuqi-pojo" target="1.7" />
+      <module name="yuqi-portal-web" target="1.7" />
+      <module name="yuqi-recommend-interface" target="1.7" />
+      <module name="yuqi-recommend-service" target="1.7" />
+      <module name="yuqi-search-interface" target="1.7" />
+      <module name="yuqi-search-service" target="1.7" />
+      <module name="yuqi-search-web" target="1.7" />
+      <module name="yuqi-sellergoods-interface" target="1.7" />
+      <module name="yuqi-sellergoods-service" target="1.7" />
+      <module name="yuqi-shop-web" target="1.7" />
+      <module name="yuqi-solr-util" target="1.7" />
+      <module name="yuqi-user-interface" target="1.7" />
+      <module name="yuqi-user-service" target="1.7" />
+      <module name="yuqi-user-web" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

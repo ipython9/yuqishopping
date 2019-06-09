@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/yuqi-order-service/pinyougou-order-service.iml" filepath="$PROJECT_DIR$/yuqi-order-service/pinyougou-order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/yuqi.iml" filepath="$PROJECT_DIR$/.idea/yuqi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-common/yuqi-common.iml" filepath="$PROJECT_DIR$/yuqi-common/yuqi-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-dao/yuqi-dao.iml" filepath="$PROJECT_DIR$/yuqi-dao/yuqi-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-manager-web/yuqi-manager-web.iml" filepath="$PROJECT_DIR$/yuqi-manager-web/yuqi-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-parent/yuqi-parent.iml" filepath="$PROJECT_DIR$/yuqi-parent/yuqi-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-pojo/yuqi-pojo.iml" filepath="$PROJECT_DIR$/yuqi-pojo/yuqi-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-portal-web/yuqi-portal-web.iml" filepath="$PROJECT_DIR$/yuqi-portal-web/yuqi-portal-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-recommend-interface/yuqi-recommend-interface.iml" filepath="$PROJECT_DIR$/yuqi-recommend-interface/yuqi-recommend-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-recommend-service/yuqi-recommend-service.iml" filepath="$PROJECT_DIR$/yuqi-recommend-service/yuqi-recommend-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-search-interface/yuqi-search-interface.iml" filepath="$PROJECT_DIR$/yuqi-search-interface/yuqi-search-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-search-service/yuqi-search-service.iml" filepath="$PROJECT_DIR$/yuqi-search-service/yuqi-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-search-web/yuqi-search-web.iml" filepath="$PROJECT_DIR$/yuqi-search-web/yuqi-search-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-sellergoods-interface/yuqi-sellergoods-interface.iml" filepath="$PROJECT_DIR$/yuqi-sellergoods-interface/yuqi-sellergoods-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-sellergoods-service/yuqi-sellergoods-service.iml" filepath="$PROJECT_DIR$/yuqi-sellergoods-service/yuqi-sellergoods-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-shop-web/yuqi-shop-web.iml" filepath="$PROJECT_DIR$/yuqi-shop-web/yuqi-shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-solr-util/yuqi-solr-util.iml" filepath="$PROJECT_DIR$/yuqi-solr-util/yuqi-solr-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yuqi-user-web/yuqi-user-web.iml" filepath="$PROJECT_DIR$/yuqi-user-web/yuqi-user-web.iml" />
+    </modules>
+  </component>
+</project>

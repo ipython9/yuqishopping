@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-manager-web" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-portal-web" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-search-interface" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-search-service" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-search-web" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-solr-util" vcs="" />
+    <mapping directory="$PROJECT_DIR$/yuqi-user-web" vcs="" />
+  </component>
+</project>

@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="UserCF" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="UserCF" />
+    <module name="yuqi-parent" />
+    <method />
+  </configuration>
+</component>

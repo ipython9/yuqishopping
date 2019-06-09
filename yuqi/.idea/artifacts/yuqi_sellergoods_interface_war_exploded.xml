@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="yuqi-sellergoods-interface:war exploded">
+    <output-path>$PROJECT_DIR$/yuqi-sellergoods-interface/target/yuqi-sellergoods-interface</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>yuqi-sellergoods-interface</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="yuqi-sellergoods-interface" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="yuqi-pojo-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="yuqi-pojo" />
+          </element>
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/yuqi-sellergoods-interface/target/yuqi-sellergoods-interface/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="yuqi-sellergoods-interface/web/Web" />
+    </root>
+  </artifact>
+</component>

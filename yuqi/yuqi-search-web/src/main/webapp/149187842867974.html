@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>产品详情页</title>
+    <link rel="icon" href="img/assets/img/favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="css/webbase.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages-item.css" />
+    <link rel="stylesheet" type="text/css" href="css/pages-zoom.css" />
+    <link rel="stylesheet" type="text/css" href="css/widget-cartPanelView.css" />
+    
+    <script type="text/javascript" src="plugins/angularjs/angular.min.js"> </script>
+    <script type="text/javascript" src="js/base.js"> </script>
+    <script type="text/javascript" src="js/controller/itemController.js"> </script>
+    <script>
+        var skuList=[
+                     {
+             id:1369315,
+             title:'中国科幻基石丛书：三体（套装1-3册） 重庆出版社 流浪地球',
+             price:55.8,
+             spec:{"出版社":"重庆出版社","版本":"流浪地球"}
+           } ,
+           {
+             id:1369316,
+             title:'中国科幻基石丛书：三体（套装1-3册） 北京出版社 流浪地球',
+             price:55.8,
+             spec:{"出版社":"北京出版社","版本":"流浪地球"}
+           } ,
+           {
+             id:1369317,
+             title:'中国科幻基石丛书：三体（套装1-3册） 江苏文艺出版社 流浪地球',
+             price:55.8,
+             spec:{"出版社":"江苏文艺出版社","版本":"流浪地球"}
+           } ,
+           {
+             id:1369318,
+             title:'中国科幻基石丛书：三体（套装1-3册） 机械工业出版社 流浪地球',
+             price:55.8,
+             spec:{"出版社":"机械工业出版社","版本":"流浪地球"}
+           } ,
+           {
+             id:1369319,
+             title:'中国科幻基石丛书：三体（套装1-3册） 重庆出版社 宇宙往事',
+             price:65.8,
+             spec:{"出版社":"重庆出版社","版本":"宇宙往事"}
+           } ,
+           {
+             id:1369320,
+             title:'中国科幻基石丛书：三体（套装1-3册） 北京出版社 宇宙往事',
+             price:65.8,
+             spec:{"出版社":"北京出版社","版本":"宇宙往事"}
+           } ,
+           {
+             id:1369321,
+             title:'中国科幻基石丛书：三体（套装1-3册） 江苏文艺出版社 宇宙往事',
+             price:65.8,
+             spec:{"出版社":"江苏文艺出版社","版本":"宇宙往事"}
+           } ,
+           {
+             id:1369322,
+             title:'中国科幻基石丛书：三体（套装1-3册） 机械工业出版社 宇宙往事',
+             price:65.8,
+             spec:{"出版社":"机械工业出版社","版本":"宇宙往事"}
+           } ,
+        ];
+        
+    </script>
+</head>
+
+<body ng-app="pinyougou" ng-controller="itemController" ng-init="num=1;loadSku();name()">
+
+<!--页面顶部 开始-->
+<div id="nav-bottom">
+	<!--顶部-->
+	<div class="nav-top">
+        <div class="top">
+            <div class="py-container">
+                <div class="shortcut">
+                    <ul class="fl">
+                        <li class="f-item">郁柒商城欢迎您！</li>
+                        <li class="f-item" ng-if="loginName==anonymousUser">请<a href="http://localhost:9100/cas/login" target="_blank">登录</a>　<span><a href="http://localhost:9106/register.html" target="_blank">免费注册</a></span></li>
+                        <li class="f-item" ng-if="loginName!='anonymousUser'">{{loginName}}</li>
+                    </ul>
+                    <ul class="fr">
+                        <li class="f-item"><a href="http://localhost:9103/index.html" target="_blank">商城首页</a></li>
+                        <li class="f-item space"></li>
+                        <li class="f-item"><a href="http://localhost:9106/home-index.html" target="_blank">我的商城</a></li>
+                        <li class="f-item space"></li>
+                        <li class="f-item" id="service">
+                            <span>客户服务</span>
+                            <ul class="service">
+                                <li><a href="http://localhost:9103/shoplogin.html" target="_blank">商家后台</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+		<!--头部-->
+		<div class="header">
+			<div class="py-container">
+				<div class="yui3-g Logo">
+					<div class="yui3-u Left logoArea">
+						<a class="logo-bd" title="品优购" href="JD-index.html" target="_blank"></a>
+					</div>
+					<div class="yui3-u Center searchArea">
+						<div class="search">
+							<form action="" class="sui-form form-inline">
+								<!--searchAutoComplete-->
+                                <div class="input-append">
+                                    <input type="text" id="autocomplete" ng-model="keywords" type="text" class="input-error input-xxlarge" />
+                                    <a class="sui-btn btn-xlarge btn-danger" href="http://localhost:9104/search.html#?keywords={{keywords}}" type="button">搜索</a>
+                                </div>
+							</form>
+						</div>
+						<div class="hotwords">
+													</div>
+					</div>
+					<div class="yui3-u Right shopArea">
+						<div class="fr shopcar">
+							<div class="show-shopcar" id="shopcar">
+								<span class="car"></span>
+								<a class="sui-btn btn-default btn-xlarge" href="cart.html" target="_blank">
+									<span>我的购物车</span>
+									<i class="shopnum">0</i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="yui3-g NavList">
+					<div class="yui3-u Left all-sort">
+						<h4>产品详细信息</h4>
+					</div>
+					<div class="yui3-u Center navArea">
+					</div>
+					<div class="yui3-u Right"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--页面顶部 结束-->
+	<div class="py-container">
+		<div id="item">
+			<div class="crumb-wrap">
+				<ul class="sui-breadcrumb">
+					<li>
+						<a href="http://localhost:9104/search.html#?keywords=图书、文娱、电子书">图书、文娱、电子书</a>
+					</li>
+					<li>
+						<a href="http://localhost:9104/search.html#?keywords=图书、文娱、电子书">图书</a>
+					</li>
+					<li>
+						<a href="http://localhost:9104/search.html#?keywords=图书、文娱、电子书">图书</a>
+					</li>	
+							
+				</ul>
+			</div>
+			<!--product-info-->
+			<div class="product-info">
+				<div class="fl preview-wrap">
+					<!--放大镜效果-->
+					<div class="zoom">
+						<!--默认第一个预览-->
+						<div id="preview" class="spec-preview">
+							<span class="jqzoom">
+							     <img jqimg="http://47.101.218.112:9999/group1/M00/00/01/rBEuj1zNRY-ADcqwAAAN7x30q20918.jpg" src="http://47.101.218.112:9999/group1/M00/00/01/rBEuj1zNRY-ADcqwAAAN7x30q20918.jpg" width="400px" height="400px" />
+							</span>
+						</div>
+						<!--下方的缩略图-->
+						<div class="spec-scroll">
+							<a class="prev">&lt;</a>
+							<!--左右按钮-->
+							<div class="items">
+								<ul>
+									  <li><img src="http://47.101.218.112:9999/group1/M00/00/01/rBEuj1zNRY-ADcqwAAAN7x30q20918.jpg" bimg="http://47.101.218.112:9999/group1/M00/00/01/rBEuj1zNRY-ADcqwAAAN7x30q20918.jpg" onmousemove="preview(this)" /></li>
+									  <li><img src="http://47.101.218.112:9999/group1/M00/00/01/rBEuj1zNRZiAMbztAAAR0Qr98RA091.jpg" bimg="http://47.101.218.112:9999/group1/M00/00/01/rBEuj1zNRZiAMbztAAAR0Qr98RA091.jpg" onmousemove="preview(this)" /></li>
+								</ul>
+							</div>
+							<a class="next">&gt;</a>
+						</div>
+					</div>
+				</div>
+				<div class="fr itemInfo-wrap">
+					<div class="sku-name">
+						<h4>{{sku.title}}</h4>
+					</div>
+					<div class="news"><span>《三体》获第73届世界科幻大会颁发的雨果奖*佳长篇小说奖，银河奖特别奖，刘慈欣被授予2018年度克拉克想象力服务社会奖，亚洲首位雨果奖得主十届银河奖得主 刘慈欣 著</span></div>
+					<div class="summary">
+						<div class="summary-wrap">
+							<div class="fl title">
+								<i>价　　格</i>
+							</div>
+							<div class="fl price">
+								<i>¥</i>
+								<em>{{sku.price}}</em>
+							</div>
+						</div>
+					</div>
+					<div class="support">
+
+					</div>
+					<div class="clearfix choose">
+						<div id="specification" class="summary-wrap clearfix">
+							
+							  <dl>
+								<dt>
+									<div class="fl title">
+									<i>版本</i>
+								</div>
+								</dt>
+								
+								  <dd><a href="javascript:;" 
+								        class="{{isSelected('版本','流浪地球')?'selected':''}}" 
+								        ng-click="selectSpecification('版本','流浪地球')">流浪地球
+								        <span title="点击取消选择">&nbsp;</span>
+								        </a></dd>
+								  <dd><a href="javascript:;" 
+								        class="{{isSelected('版本','宇宙往事')?'selected':''}}" 
+								        ng-click="selectSpecification('版本','宇宙往事')">宇宙往事
+								        <span title="点击取消选择">&nbsp;</span>
+								        </a></dd>
+							  </dl>
+							
+							  <dl>
+								<dt>
+									<div class="fl title">
+									<i>出版社</i>
+								</div>
+								</dt>
+								
+								  <dd><a href="javascript:;" 
+								        class="{{isSelected('出版社','重庆出版社')?'selected':''}}" 
+								        ng-click="selectSpecification('出版社','重庆出版社')">重庆出版社
+								        <span title="点击取消选择">&nbsp;</span>
+								        </a></dd>
+								  <dd><a href="javascript:;" 
+								        class="{{isSelected('出版社','北京出版社')?'selected':''}}" 
+								        ng-click="selectSpecification('出版社','北京出版社')">北京出版社
+								        <span title="点击取消选择">&nbsp;</span>
+								        </a></dd>
+								  <dd><a href="javascript:;" 
+								        class="{{isSelected('出版社','江苏文艺出版社')?'selected':''}}" 
+								        ng-click="selectSpecification('出版社','江苏文艺出版社')">江苏文艺出版社
+								        <span title="点击取消选择">&nbsp;</span>
+								        </a></dd>
+								  <dd><a href="javascript:;" 
+								        class="{{isSelected('出版社','机械工业出版社')?'selected':''}}" 
+								        ng-click="selectSpecification('出版社','机械工业出版社')">机械工业出版社
+								        <span title="点击取消选择">&nbsp;</span>
+								        </a></dd>
+							  </dl>
+							
+						</div>
+					
+						<div class="summary-wrap">
+							<div class="fl title">
+								<div class="control-group">
+									<div class="controls">
+										<input autocomplete="off" ng-model="num" type="text" value="1" minnum="1" class="itxt" />
+										<a href="javascript:void(0)" class="increment plus" ng-click="addNum(1)">+</a>
+										<a href="javascript:void(0)" class="increment mins" ng-click="addNum(-1)">-</a>
+									</div>
+								</div>
+							</div>
+							<div class="fl">
+								<ul class="btn-choose unstyled">
+									<li>
+										<a  class="sui-btn  btn-danger addshopcar" ng-click="addToCart()">加入购物车</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--product-detail-->
+			<div class="clearfix product-detail">
+				</div>
+				<div class="fr detail">
+
+					<div class="tab-main intro">
+						<ul class="sui-nav nav-tabs tab-wraped">
+							<li class="active">
+								<a href="#one" data-toggle="tab">
+									<span>商品介绍</span>
+								</a>
+							</li>
+							<li>
+								<a href="#two" data-toggle="tab">
+									<span>规格与包装</span>
+								</a>
+							</li>
+							<li>
+								<a href="#three" data-toggle="tab">
+									<span>售后保障</span>
+								</a>
+							</li>
+
+						</ul>
+						<div class="clearfix"></div>
+						<div class="tab-content tab-wraped">
+							<div id="one" class="tab-pane active">
+
+								<div class="intro-detail">
+									<ul id="parameter2" class="p-parameter-list" style="color:#666666;font-family:tahoma, arial, &quot;font-size:12px;background-color:#FFFFFF;">
+	<li>
+		出版社：&nbsp;<a target="_blank" href="https://book.jd.com/publish/%E9%87%8D%E5%BA%86%E5%87%BA%E7%89%88%E7%A4%BE_1.html">重庆出版社</a> 
+	</li>
+	<li>
+		ISBN：11757834
+	</li>
+	<li>
+		版次：1
+	</li>
+	<li>
+		商品编码：11757834
+	</li>
+	<li>
+		品牌：科幻世界
+	</li>
+	<li>
+		包装：平装
+	</li>
+	<li>
+		丛书名：&nbsp;<a target="_blank" href="https://search.jd.com/Search?keyword=%D6%D0%B9%FA%BF%C6%BB%C3%BB%F9%CA%AF%B4%D4%CA%E9&amp;book=y">中国科幻基石丛书</a> 
+	</li>
+	<li>
+		开本：32开
+	</li>
+	<li>
+		出版时间：2008-01-01
+	</li>
+	<li>
+		用纸：轻型纸
+	</li>
+	<li>
+		套装数量：3
+	</li>
+</ul>
+								</div>
+							</div>
+							<div id="two" class="tab-pane">
+                                <ul class="goods-intro unstyled">
+									      <li>页数：345</li>
+                                </ul>
+								<p>平装</p>
+							</div>
+							<div id="three" class="tab-pane">
+								<p>正品行货
+京东商城向您保证所售商品均为正品行货，京东自营商品开具机打发票或电子发票。
+全国联保
+凭质保证书及京东商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由京东联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。京东商城还为您提供具有竞争力的商品价格和运费政策，请您放心购买！ 
+
+注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--like-->
+		</div>
+	</div>
+	<!-- 底部栏位 -->
+	
+<!--页面底部  开始 -->
+<div class="clearfix footer">
+    <div class="py-container">
+        <div class="footlink">
+            <div class="Mod-service">
+                <ul class="Mod-Service-list">
+                    <li class="grid-service-item intro  intro1">
+
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+
+                    </li>
+                    <li class="grid-service-item  intro intro2">
+
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+
+                    </li>
+                    <li class="grid-service-item intro  intro3">
+
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+
+                    </li>
+                    <li class="grid-service-item  intro intro4">
+
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+
+                    </li>
+                    <li class="grid-service-item intro intro5">
+
+                        <i class="serivce-item fl"></i>
+                        <div class="service-text">
+                            <h4>正品保障</h4>
+                            <p>正品保障，提供发票</p>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix Mod-list">
+                <div class="yui3-g">
+                    <div class="yui3-u-1-6">
+                        <h4>购物指南</h4>
+                        <ul class="unstyled">
+                            <li>购物流程</li>
+                            <li>会员介绍</li>
+                            <li>生活旅行/团购</li>
+                            <li>常见问题</li>
+                            <li>购物指南</li>
+                        </ul>
+
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>配送方式</h4>
+                        <ul class="unstyled">
+                            <li>上门自提</li>
+                            <li>211限时达</li>
+                            <li>配送服务查询</li>
+                            <li>配送费收取标准</li>
+                            <li>海外配送</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>支付方式</h4>
+                        <ul class="unstyled">
+                            <li>货到付款</li>
+                            <li>在线支付</li>
+                            <li>分期付款</li>
+                            <li>邮局汇款</li>
+                            <li>公司转账</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>售后服务</h4>
+                        <ul class="unstyled">
+                            <li>售后政策</li>
+                            <li>价格保护</li>
+                            <li>退款说明</li>
+                            <li>返修/退换货</li>
+                            <li>取消订单</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>特色服务</h4>
+                        <ul class="unstyled">
+                            <li>夺宝岛</li>
+                            <li>DIY装机</li>
+                            <li>延保服务</li>
+                            <li>郁柒E卡</li>
+                            <li>郁柒通信</li>
+                        </ul>
+                    </div>
+                    <div class="yui3-u-1-6">
+                        <h4>帮助中心</h4>
+                        <img src="img/wx_cz.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="Mod-copyright">
+                <ul class="helpLink">
+                    <li>关于我们<span class="space"></span></li>
+                    <li>联系我们<span class="space"></span></li>
+                    <li>关于我们<span class="space"></span></li>
+                    <li>商家入驻<span class="space"></span></li>
+                    <li>营销中心<span class="space"></span></li>
+                    <li>友情链接<span class="space"></span></li>
+                    <li>关于我们<span class="space"></span></li>
+                    <li>营销中心<span class="space"></span></li>
+                    <li>友情链接<span class="space"></span></li>
+                    <li>关于我们</li>
+                </ul>
+                <p>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100</p>
+                <p>京ICP备08001421号京公网安备110108007702</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页面底部END-->
+undefined
+
+</html>
+
+	
+
+
+	
+
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#service").hover(function(){
+		$(".service").show();
+	},function(){
+		$(".service").hide();
+	});
+	$("#shopcar").hover(function(){
+		$("#shopcarlist").show();
+	},function(){
+		$("#shopcarlist").hide();
+	});
+
+})
+</script>
+<script type="text/javascript" src="js/model/cartModel.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.easing/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/plugins/sui/sui.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.jqzoom/jquery.jqzoom.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.jqzoom/zoom.js"></script>
+<script type="text/javascript" src="index/index.js"></script>
+
+<!--页面底部  结束 -->
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="yuqi-search-web:war">
+    <output-path>$PROJECT_DIR$/yuqi-search-web/target</output-path>
+    <root id="archive" name="yuqi-search-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="yuqi-search-web:war exploded" />
+    </root>
+  </artifact>
+</component>

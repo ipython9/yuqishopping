@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-cart-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-cart-web" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-content-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-manager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-order-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-page-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-page-web" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-pay-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-portal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-recommend-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-search-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-sellergoods-interface" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-sellergoods-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-shop-web" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-user-service" />
+    <file type="web" url="file://$PROJECT_DIR$/yuqi-user-web" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/yuqi-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-common/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-dao/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-sellergoods-service/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-manager-web/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-shop-web/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-sellergoods-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-portal-web/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-search-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-search-service/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-solr-util/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-user-web/pom.xml" />
+        <option value="$PROJECT_DIR$/yiqi-mahout-service/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-recommend-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/yuqi-recommend-service/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectResources">
+    <resource url="http://www.springframework.org/schema/aop/spring-aop.xsd " location="C:/AppData/schema/schema/spring-aop-4.2.xsd" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
